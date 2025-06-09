@@ -30,7 +30,18 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-          
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                print('Поиск');
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () => print('Настройки'),
+            ),
+          ],
         ),
       ),
     );
