@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart'; // svg utils
 
 void main() {
   runApp(MyApp());
@@ -18,30 +18,14 @@ class MyApp extends StatelessWidget {
           elevation: 2,
           title: Row(
             children: [
-              SvgPicture.asset(
-                'assets/svgs/logo_icon.svg',
-                width: 32,
-                height: 32,
-              ),
-              const SizedBox(width: 3), // Отступ между логотипом и текстом
-              const Text(
-                'ToDo',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              Icon(Icons.task_alt),
+              SizedBox(width: 5),
+              Text(
+                "To-Do",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ],
           ),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                print('Поиск');
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () => print('Настройки'),
-            ),
-          ],
         ),
       ),
     );
