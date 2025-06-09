@@ -13,26 +13,30 @@ class MyApp extends StatelessWidget {
       title: "ToDo",
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Logo",
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-              ),
-              Icon(Icons.menu),
-            ],
+          backgroundColor: Colors.deepPurple,
+          elevation: 4,
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              print('Открыть меню');
+            },
           ),
-        ),
-        bottomNavigationBar: Container(
-          color: Colors.blue,
-          padding: EdgeInsets.all(16),
-          child: Text(
-            'Developer +996557230021',
-            style: TextStyle(color: Colors.white, fontSize: 16),
-            textAlign: TextAlign.center,
-          ),
+          title: Text('ToDo Приложение'),
+          centerTitle: true,
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                print('Поиск нажали');
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.more_vert),
+              onPressed: () {
+                print('Открыть настройки');
+              },
+            ),
+          ],
         ),
       ),
     );
