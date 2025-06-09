@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "ToDo",
       home: Scaffold(
         appBar: AppBar(
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           elevation: 2,
           title: Row(
             children: [
-              Icon(Icons.task_alt),
+              Icon(Icons.tag_faces),
               SizedBox(width: 5),
               Text(
                 "To-Do",
@@ -26,6 +27,14 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                print('Нажата иконка уведомлений');
+              },
+            ),
+          ],
         ),
       ),
     );
